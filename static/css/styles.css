@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+.product-img {
+    width: 10%;
+    max-width: 12px;
+    /* Limit size */
+    height: 10px;
+    object-fit: cover;
+    border-radius: 1px;
+}
+
+/* styles.css */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.table {
+    border-radius: 10px;
+}
+
+.navbar {
+    border-bottom: 2px solid #343a40;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px;
+}
