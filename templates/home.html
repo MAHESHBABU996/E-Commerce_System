@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Our E-Commerce Platform{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1 class="mt-4">Welcome to Our E-Commerce Platform</h1>
+    <p>Join us as a Customer, Vendor, or Logistics Partner!</p>
+
+    <!-- Signup Section -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>New Here? Sign Up</h3>
+            <form method="post" action="{% url 'signup' %}" class="needs-validation" novalidate>
+                {% csrf_token %}
+                {{ signup_form.as_p }}
+                <button type="submit" class="btn btn-success">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Login Section -->
+        <div class="col-md-6">
+            <h3>Already a Member? Log In</h3>
+            <form method="post" action="{% url 'login' %}" class="needs-validation" novalidate>
+                {% csrf_token %}
+                {{ login_form.as_p }}
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation for Users -->
+    <div class="mt-5">
+        <h3>Explore Our Platform</h3>
+        <a href="{% url 'product_list' %}" class="btn btn-outline-primary">Browse Products</a>
+        <a href="{% url 'vendor_dashboard' %}" class="btn btn-outline-secondary">Vendor Portal</a>
+        <a href="{% url 'logistics_dashboard' %}" class="btn btn-outline-info">Logistics Dashboard</a>
+    </div>
+</div>
+
+{% endblock %}
